@@ -1,4 +1,4 @@
-"""Batch Update FB Post/Photo Privacy."""
+"""Batch Update FB Post Privacy."""
 import calendar
 import json
 import string
@@ -77,7 +77,7 @@ def collect_posts(collect_url):
 
 def main():
     """Main Loop."""
-    raw_collect_url = '/me?access_token={TOKEN}&fields=photos,posts.until({UNTIL}).since({SINCE})'
+    raw_collect_url = '/me?access_token={TOKEN}&fields=posts.until({UNTIL}).since({SINCE})'
     collect_url = raw_collect_url.format(TOKEN=TOKEN, SINCE=SINCE, UNTIL=UNTIL)
     print "Requesting {collect_url}".format(collect_url=collect_url)
 
